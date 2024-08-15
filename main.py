@@ -8,6 +8,7 @@ app = FastAPI()
 # cors origin setting area
 origins = [
     "http://127.0.0.1:5173"
+    "https://benchmark-frontend.vercel.app"
 ]
 
 app.add_middleware(
