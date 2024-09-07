@@ -22,6 +22,8 @@ docs.zip
 archive.zip
 *.txt
 *.env
+migrations
+alembic.ini
 
 # vim temporary files
 *~
