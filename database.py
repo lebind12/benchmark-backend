@@ -1,3 +1,4 @@
+import os
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -6,12 +7,10 @@ from sqlalchemy.orm import sessionmaker
 Database connection
 '''
 
-SQLALCHEMY_DATABASE_URL = "postgresql://benchmark_user:dizkahwm12@localhost:5432/benchmark"
+SQLALCHEMY_DATABASE_URL = os.env.get('DB_URL')
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={
-        "check_same_thread": False
-    }
+    SQLALCHEMY_DATABASE_URL
 )
 SessionLocal = sessionmaker(
     autocommit=False,
