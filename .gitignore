@@ -34,4 +34,4 @@ alembic.ini
 .DS_Store
 
 # crawling
-crawling.ipynb
+*.ipynb

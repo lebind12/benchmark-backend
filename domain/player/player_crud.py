@@ -10,5 +10,4 @@ def get_lineup_data_by_teamid(db:Session, team_id: int):
     returnData = {}
     for item in db_lineupData:
         returnData[item.player_id] = item.kor_short_name
-    
     return returnData
